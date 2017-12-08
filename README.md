@@ -36,3 +36,11 @@
 |제 15주 |	텀프로젝트 시연 	최종과제 발표|
 
 * * *
+
+**⌘ 프로젝트 진행 방법 및 일정**
+
+![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide1.JPG)
+![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide2.JPG)
+![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide3.JPG)
+
+* * *
