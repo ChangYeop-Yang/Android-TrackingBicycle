@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TrackingBicycle</string>
+
+    <!-- FRAME_HOME -->
+    <string name="Home_Weather_State">날씨상태</string>
+    <string name="Home_Weather_Contents">날씨정보</string>
+    <string name="Home_Weather_Call">전화하기</string>
+    <string name="Home_Weather_Message">문자하기</string>
+    <string name="Home_Weather_Refresh">새로고침</string>
+    <string name="Home_Sensor_Information">센서 정보</string>
+    <string name="Home_GPS_Information">GPS 정보</string>
 </resources>
