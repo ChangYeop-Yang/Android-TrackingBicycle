@@ -1,9 +1,11 @@
 package yeop9657.blog.me.trackingbicycle;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,8 +16,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
 import java.util.Date;
@@ -37,6 +42,7 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
 
     /* MARK - : LocationSystem */
     private LocationSystem mLocationSystem = null;
+    private PolylineOptions mPolylineOptions = null;
 
     /* MARK - : View */
     private View mView = null;
@@ -69,7 +75,7 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         super.onStop();
 
         /* POINT - : SweetAlertDialog */
-        new SweetAlertDialog(mView.getContext(), SweetAlertDialog.NORMAL_TYPE).setTitleText("Save MyLocation Path").setContentText(mView.getContext().getResources().getString(R.string.ALERT_PATH_SAVE))
+        new SweetAlertDialog(mView.getContext(), SweetAlertDialog.WARNING_TYPE).setTitleText("Save MyLocation Path").setContentText(mView.getContext().getResources().getString(R.string.ALERT_PATH_SAVE))
                 .setConfirmText("저장").setCancelText("취소").setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
@@ -94,7 +100,17 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         }).show();
     }
 
-    /* TODO - : Drawing Path Method */
+    /* TODO - : Create Marker Method */
+    private void createMarker(final String mTitle, final LatLng mLatLng, final float mColor) {
+
+        /* POINT - : MarkerOptions */
+        final MarkerOptions mMarkerOptions = new MarkerOptions();
+        mMarkerOptions.title(mTitle);       mMarkerOptions.snippet(new Date().toString());
+        mMarkerOptions.draggable(false);    mMarkerOptions.position(mLatLng);
+        mMarkerOptions.icon(BitmapDescriptorFactory.defaultMarker(mColor));
+
+        mGoogleMap.addMarker(mMarkerOptions);
+    }
 
     /* TODO - : OnMapReadyCallback */
     @Override
@@ -102,10 +118,18 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
     public void onMapReady(GoogleMap googleMap) {
         mGoogleMap = googleMap;
 
+        /* POINT - : GoogleMap  */
         googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.setOnMyLocationChangeListener(mOnMyLocationChangeListener);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), 17));
+        googleMap.setOnMarkerClickListener(mOnMarkerClickListener);
+        createMarker("START", new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), BitmapDescriptorFactory.HUE_RED);
+
+        /* POINT - : PolylineOptions */
+        mPolylineOptions = new PolylineOptions();
+        mPolylineOptions.width(10);      mPolylineOptions.color(Color.BLUE);
+        mPolylineOptions.clickable(true);       mPolylineOptions.geodesic(true);
     }
 
     /* TODO - : setOnMyLocationChangeListener */
@@ -121,6 +145,22 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
             mPathAdapter.setLatitude(location.getLatitude());   mPathAdapter.setLongitude(location.getLongitude());
             mPathAdapter.setCurrentDate(new Date());            mPathAdapter.setfSpeed(location.getSpeed());
             cMyPath.add(mPathAdapter);
+
+            /* POINT - : PolylineOptions */
+            mPolylineOptions.add(new LatLng(location.getLatitude(), location.getLongitude()));
+            mGoogleMap.addPolyline(mPolylineOptions);
+        }
+    };
+
+    /* TODO - : OnMarkerClickListener */
+    private GoogleMap.OnMarkerClickListener mOnMarkerClickListener = new GoogleMap.OnMarkerClickListener() {
+        @Override
+        public boolean onMarkerClick(Marker marker) {
+
+            /* POINT - : Snackbar */
+            final String mString = String.format("※ Address: %s", mLocationSystem.convertGEOAddress(marker.getPosition().latitude, marker.getPosition().longitude));
+            Snackbar.make(mView, mString, Snackbar.LENGTH_SHORT).show();
+            return false;
         }
     };
 }
