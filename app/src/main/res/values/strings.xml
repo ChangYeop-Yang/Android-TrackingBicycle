@@ -9,4 +9,21 @@
     <string name="Home_Weather_Refresh">새로고침</string>
     <string name="Home_Sensor_Information">센서 정보</string>
     <string name="Home_GPS_Information">GPS 정보</string>
+
+    <!-- ERROR INFORMATION -->
+    <string name="ERROR_LOCATION_ACCESS">기기에서 GPS를 사용할 수 없습니다.</string>
+    <string name="ERROR_PERMISSION_ACCEPT">어플리케이션 구동에 필수적인 권한을 허용하셔야 이용이 가능합니다.\n[설정]을 통해서 권한 설정을 해주세요.</string>
+
+    <!-- ALERT INFORMATION -->
+    <string name="ALERT_PATH_SAVE">현재 경로를 저장하시겠습니까?</string>
+
+    <!-- PREFERENCE -->
+    <string name="Preference_USER_Information">USER_INFORMATION</string>
+    <string name="Preference_Developer_Information">DEVELOPER_INFORMATION</string>
+    <string name="Preference_Developer_State">- 개발자 정보</string>
+    <string name="Preference_Developer_State_Text">개발자 정보를 확인합니다.</string>
+    <string name="Preference_Developer_Email">- 개발자 이메일</string>
+    <string name="Preference_Developer_Email_Text">개발자에게 이메일을 보냅니다.</string>
+    <string name="Preference_Developer_OpenSource">- 오픈소스 정보</string>
+    <string name="Preference_Developer_OpenSource_Text">오픈소스 정보를 확인합니다.</string>
 </resources>

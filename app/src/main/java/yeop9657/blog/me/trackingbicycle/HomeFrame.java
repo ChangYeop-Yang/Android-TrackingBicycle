@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import yeop9657.blog.me.trackingbicycle.Location.LocationSystem;
+
 /**
  * Created by 양창엽 on 2017-12-09.
  */
@@ -18,7 +20,15 @@ public class HomeFrame extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View mView = inflater.inflate(R.layout.frame_home, container, false);
 
+        /* POINT - : GPS Location Information */
+        new LocationSystem(mView, true);
+
         return mView;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     /* MARK - : OnClickListener */
@@ -26,7 +36,9 @@ public class HomeFrame extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
 
         switch (view.getId()) {
-
+            case (R.id.bt_MainCall) : { break; }
+            case (R.id.bt_MainMessage) : { break; }
+            case (R.id.bt_MainRefresh) : { break; }
         }
     }
 }
