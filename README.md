@@ -44,3 +44,7 @@
 ![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide3.JPG)
 
 * * *
+
+**⌘ 프로젝트 소개** 
+
+* * *
