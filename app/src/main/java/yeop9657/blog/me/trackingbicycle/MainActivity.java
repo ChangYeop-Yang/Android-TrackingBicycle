@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
@@ -17,9 +17,6 @@ import java.util.ArrayList;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.RealmList;
-import io.realm.RealmResults;
-import yeop9657.blog.me.trackingbicycle.Database.LocationAdaptor;
 import yeop9657.blog.me.trackingbicycle.PublicData.FrameData;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         /* POINT - : TedPermission */
         TedPermission.with(this).setPermissionListener(mPermissionListener).setDeniedMessage(mResources.getString(R.string.ERROR_PERMISSION_ACCEPT))
                 .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE).check();
+
+        /* POINT - : WindowManager */
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     /* TODO - : TedPermission Listener */

@@ -11,6 +11,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -30,6 +33,7 @@ import io.realm.Realm;
 import yeop9657.blog.me.trackingbicycle.Database.LocationAdaptor;
 import yeop9657.blog.me.trackingbicycle.Database.PathAdapter;
 import yeop9657.blog.me.trackingbicycle.Location.LocationSystem;
+import yeop9657.blog.me.trackingbicycle.PublicData.MapData;
 
 /**
  * Created by 양창엽 on 2017-12-09.
@@ -67,6 +71,10 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         /* POINT - : LocationSystem */
         mLocationSystem = new LocationSystem(mView, false);
 
+        /* POINT - : Toggle Button */
+        final ToggleButton mToggleButton = (ToggleButton) mView.findViewById(R.id.tb_MyLocation);
+        mToggleButton.setOnCheckedChangeListener(mOnCheckedChangeListener);
+
         return mView;
     }
 
@@ -74,30 +82,8 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
     public void onStop() {
         super.onStop();
 
-        /* POINT - : SweetAlertDialog */
-        new SweetAlertDialog(mView.getContext(), SweetAlertDialog.WARNING_TYPE).setTitleText("Save MyLocation Path").setContentText(mView.getContext().getResources().getString(R.string.ALERT_PATH_SAVE))
-                .setConfirmText("저장").setCancelText("취소").setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-            @Override
-            public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                /* POINT - : Realm */
-                Realm.getDefaultInstance().executeTransaction(new Realm.Transaction() {
-                    @Override
-                    public void execute(Realm realm) {
-
-                        /* POINT - : LocationAdaptor */
-                        final LocationAdaptor mLocationAdaptor = realm.createObject(LocationAdaptor.class);
-                        mLocationAdaptor.setSaveDate(new Date());       mLocationAdaptor.setAddress(mLocationSystem.convertGEOAddress(mLocationSystem.dLatitude, mLocationSystem.dLongitude));
-                        mLocationAdaptor.setBikeName("ALTON");
-
-                        /* POINT - : PathAdapter For-Each MyPath */
-                        for (final PathAdapter mPath : cMyPath) { mLocationAdaptor.setmMyPath(mPath); }
-                    }
-                });
-
-                sweetAlertDialog.cancel();
-            }
-        }).show();
+        cMyPath.clear();
+        mGoogleMap.clear();
     }
 
     /* TODO - : Create Marker Method */
@@ -112,23 +98,92 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         mGoogleMap.addMarker(mMarkerOptions);
     }
 
+    /* TODO - : OnCheckedChangeListener */
+    private ToggleButton.OnCheckedChangeListener mOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+
+            /* POINT - : createMyLocationPath Method */
+            createMyLocationPath(isChecked);
+        }
+    };
+
+    /* TODO - : Save/End Create Path Method */
+    @SuppressLint("MissingPermission")
+    private void createMyLocationPath(final boolean isChecked) {
+
+        /* POINT - : Turn On */
+        if (isChecked) {
+
+            mGoogleMap.setMyLocationEnabled(true);
+
+            /* POINT - : Create Maker Method */
+            createMarker(MapData.MARKER_START_NAME, new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), BitmapDescriptorFactory.HUE_RED);
+        }
+        /* POINT - : Turn On */
+        else {
+
+            mGoogleMap.setMyLocationEnabled(false);
+
+            /* POINT - : Create Maker Method */
+            createMarker(MapData.MARKER_END_NAME, new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), BitmapDescriptorFactory.HUE_BLUE);
+
+            /* POINT - : SweetAlertDialog */
+            new SweetAlertDialog(mView.getContext(), SweetAlertDialog.WARNING_TYPE).setTitleText("Save MyLocation Path").setContentText(mView.getContext().getResources().getString(R.string.ALERT_PATH_SAVE))
+                    .setConfirmText("저장").setCancelText("취소").setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+
+                    /* POINT - : Realm */
+                    Realm.getDefaultInstance().executeTransactionAsync(new Realm.Transaction() {
+
+                        @Override
+                        public void execute(Realm realm) {
+
+                            /* POINT - : LocationAdaptor */
+                            final LocationAdaptor mLocationAdaptor = realm.createObject(LocationAdaptor.class);
+                            mLocationAdaptor.setSaveDate(new Date());       mLocationAdaptor.setAddress(mLocationSystem.convertGEOAddress(mLocationSystem.dLatitude, mLocationSystem.dLongitude));
+                            mLocationAdaptor.setBikeName("ALTON");
+
+                            /* POINT - : PathAdapter For-Each MyPath */
+                            for (final PathAdapter mPath : cMyPath) { mLocationAdaptor.setmMyPath(mPath); }
+                        }
+                    }, new Realm.Transaction.OnSuccess() {
+
+                        @Override
+                        public void onSuccess() {
+                            Toast.makeText(mView.getContext(), "성공적으로 경로를 저장하였습니다.", Toast.LENGTH_SHORT).show();
+                        }
+                    }, new Realm.Transaction.OnError() {
+
+                        @Override
+                        public void onError(Throwable error) {
+                            Toast.makeText(mView.getContext(), "경로 저장을 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                            error.printStackTrace();
+                        }
+                    });
+
+                    sweetAlertDialog.cancel();
+                }
+            }).show();
+        }
+    }
+
     /* TODO - : OnMapReadyCallback */
     @Override
-    @SuppressLint("MissingPermission")
     public void onMapReady(GoogleMap googleMap) {
         mGoogleMap = googleMap;
 
         /* POINT - : GoogleMap  */
-        googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.setOnMyLocationChangeListener(mOnMyLocationChangeListener);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), 17));
         googleMap.setOnMarkerClickListener(mOnMarkerClickListener);
-        createMarker("START", new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), BitmapDescriptorFactory.HUE_RED);
 
         /* POINT - : PolylineOptions */
         mPolylineOptions = new PolylineOptions();
-        mPolylineOptions.width(10);      mPolylineOptions.color(Color.BLUE);
+        mPolylineOptions.width(15);      mPolylineOptions.color(Color.BLUE);
         mPolylineOptions.clickable(true);       mPolylineOptions.geodesic(true);
     }
 

@@ -16,6 +16,7 @@
 
     <!-- ALERT INFORMATION -->
     <string name="ALERT_PATH_SAVE">현재 경로를 저장하시겠습니까?</string>
+    <string name="Alert_Confirm">확인</string>
 
     <!-- PREFERENCE -->
     <string name="Preference_USER_Information">USER_INFORMATION</string>

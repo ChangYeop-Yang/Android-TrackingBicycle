@@ -86,7 +86,8 @@ public class LocationSystem
         {
             error.printStackTrace();
             Log.e("Location GPS Error!", error.getMessage());
-            new SweetAlertDialog(mView.getContext(), SweetAlertDialog.ERROR_TYPE).setTitleText("Disable GPS System").setConfirmText(mResources.getString(R.string.ERROR_LOCATION_ACCESS)).show();
+            new SweetAlertDialog(mView.getContext(), SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Disable GPS System").setContentText(mResources.getString(R.string.ERROR_LOCATION_ACCESS)).setConfirmText("확인").show();
         }
     }
 
