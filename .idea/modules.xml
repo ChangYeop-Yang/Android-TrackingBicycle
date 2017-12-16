@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android-TrackingBicycle.iml" filepath="$PROJECT_DIR$/Android-TrackingBicycle.iml" />
-      <module fileurl="file://C:\Users\saylo\OneDrive\GitHub\Android-TrackingBicycle\TrackingBicycle.iml" filepath="C:\Users\saylo\OneDrive\GitHub\Android-TrackingBicycle\TrackingBicycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TrackingBicycle.iml" filepath="$PROJECT_DIR$/TrackingBicycle.iml" />
+      <module fileurl="file://C:\Users\jw565\Documents\bicycle_git\TrackingBicycle.iml" filepath="C:\Users\jw565\Documents\bicycle_git\TrackingBicycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Android Project\TrackingBicycle\bicycle_git.iml" filepath="D:\Android Project\TrackingBicycle\bicycle_git.iml" />
     </modules>
   </component>
 </project>

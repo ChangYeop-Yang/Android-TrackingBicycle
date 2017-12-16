@@ -1,34 +1,20 @@
 package yeop9657.blog.me.trackingbicycle.Network;
 
 import android.content.Context;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.util.Pair;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.InputStream;
 import java.net.URL;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import yeop9657.blog.me.trackingbicycle.HomeFrame;
-import yeop9657.blog.me.trackingbicycle.Location.LocationSystem;
-import yeop9657.blog.me.trackingbicycle.MainActivity;
 import yeop9657.blog.me.trackingbicycle.R;
 
 /**
@@ -46,16 +32,12 @@ public class WeatherParsing extends AsyncTask<View, Void, View> {
     private TextView vMainWeatherState,vMainWeatherContents;
     private ImageView vMainWeather;
 
-    private Pair<Double, Double> mCoordinate = null;
-
     public static int TO_GRID = 0;
-    public static int TO_GPS = 1;
     double dLat, dLong;
 
     public WeatherParsing(Context mContext, View mView, double dLatitude, double dLongitude){
         this.mContext = mContext;
         this.mView = mView;
-        //this.mCoordinate = new Pair<>(dLatitude, dLongitude);
         dLat = dLatitude;
         dLong = dLongitude;
     }

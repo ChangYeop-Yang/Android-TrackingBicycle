@@ -20,7 +20,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -105,6 +104,14 @@ public class PathAdapter extends RecyclerView.Adapter<PathAdapter.ViewHolder> {
                 mDialog.setContentView(R.layout.alert_map);
                 mDialog.show();
 
+                /* POINT - : TextView */
+                final TextView mInfoTextView = (TextView) mDialog.findViewById(R.id.tv_AlertInfo);
+                final StringBuffer mPathInfo = new StringBuffer();
+                mPathInfo.append(String.format("※ Address: %s\n", mLocationAdaptorList.get(position).getAddress()));
+                mPathInfo.append(String.format("\n※ Bicycle Type: %s\n", mLocationAdaptorList.get(position).getBikeName()));
+                mPathInfo.append(String.format("\n※ Start Date: %s\n", DateFormat.getDateInstance(DateFormat.FULL).format(mLocationAdaptorList.get(position).getSaveDate())));
+                mInfoTextView.setText(mPathInfo.toString());
+
                 /* POINT - : syncGoogleMap Method */
                 syncGoogleMap(mDialog, position);
             }
@@ -160,8 +167,7 @@ public class PathAdapter extends RecyclerView.Adapter<PathAdapter.ViewHolder> {
     /* TODO - : Sync Google Map Method */
     private void syncGoogleMap(final Dialog mDialog, final int mPosition) {
 
-        /* POINT - : View */
-        final TextView mInfoTextView = (TextView) mDialog.findViewById(R.id.tv_AlertInfo);
+        /* POINT - : Button */
         final Button mConfirm = (Button) mDialog.findViewById(R.id.bt_AlertConfirm);
 
         /* POINT - : MapView */
@@ -174,7 +180,7 @@ public class PathAdapter extends RecyclerView.Adapter<PathAdapter.ViewHolder> {
             public void onMapReady(GoogleMap googleMap) {
 
                 /* POINT - : LatLng */
-                final int mLength = mLocationAdaptorList.size() - 1;
+                final int mLength = mLocationAdaptorList.get(mPosition).getMyPath().size() - 1;
                 final LatLng mLatLng = new LatLng(mLocationAdaptorList.get(mPosition).getMyPath().get(mLength / 2).getLatitude(), mLocationAdaptorList.get(mPosition).getMyPath().get(mLength / 2).getLongitude());
 
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mLatLng, 18));

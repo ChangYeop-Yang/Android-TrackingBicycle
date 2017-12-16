@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.gun0912.tedpermission.PermissionListener;
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
             /* POINT - : Toast */
             Toast.makeText(mContext, tab.getText().toString(), Toast.LENGTH_SHORT).show();
 
+            /* POINT - : FrameLayout */
+            final FrameLayout mFrameLayout = (FrameLayout) findViewById(R.id.MainFrameLayout);
+            mFrameLayout.removeAllViews();
+
             switch ((int) tab.getTag()) {
 
                 case (FrameData.FRAME_HOME_NUM) : {
@@ -99,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 case (FrameData.FRAME_SETTING_NUM) : {
-                    getFragmentManager().popBackStack();
                     getFragmentManager().beginTransaction().replace(R.id.MainFrameLayout, new SettingFrame()).commit();
                     break;
                 }

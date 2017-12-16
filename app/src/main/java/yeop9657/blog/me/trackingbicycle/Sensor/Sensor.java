@@ -16,8 +16,7 @@ import yeop9657.blog.me.trackingbicycle.R;
 public class Sensor {
 	TextView textview_sensor_info;
 	View view = null;
-	Context context = null;
-	
+
 	public Sensor(View v){
 		view = v;
 		textview_sensor_info= v.findViewById(R.id.tv_MainDeviceInfo);
@@ -91,43 +90,7 @@ public class Sensor {
 					textview_sensor_info.setText(totalString);
 					textview_sensor_info.invalidate();
 					break;
-					/*
-				case android.hardware.Sensor.TYPE_LINEAR_ACCELERATION:
-					output[4] +=
-							"\n X:" + v[0] +
-									"\n Y:" + v[1] +
-									"\n Z:" + v[2] + "\n";
-					TextView txt5 =(TextView)findViewById(R.id.editText5);
-					txt5.setText(output);
-					break;
-					
-				case android.hardware.Sensor.TYPE_GAME_ROTATION_VECTOR:
-					output[5] +=
-							"\n X:" + v[0] +
-									"\n Y:" + v[1] +
-									"\n Z:" + v[2] + "\n";
-					TextView txt7 =(TextView)findViewById(R.id.editText7);
-					txt7.setText(output);
-					break;
-					
-				case android.hardware.Sensor.TYPE_ORIENTATION:
-					output[0] +=
-							"\n azimuth:" + v[0] +
-									"\n pitch:" + v[1] +
-									"\n roll:" + v[2] + "\n";
-					break;
-				case android.hardware.Sensor.TYPE_GRAVITY:
-					output[1] +=
-							"\n X:" + v[0] +
-									"\n Y:" + v[1] +
-									"\n Z:" + v[2] + "\n";
-					break;
-					
-					*/
-				
 			}
-			
-			
 		}
 	};
 }

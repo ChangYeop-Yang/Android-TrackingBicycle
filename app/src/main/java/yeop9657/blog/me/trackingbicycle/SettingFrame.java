@@ -22,10 +22,6 @@ public class SettingFrame extends PreferenceFragment{
         setOnPreferenceChange(findPreference("key_phone_number"));
         setOnPreferenceChange(findPreference("key_bloodtype"));
         setOnPreferenceChange(findPreference("key_emergency_number"));
-
-//		EditTextPreference editpref_emergency = (EditTextPreference) findPreference("key_emergency_number");
-//		editpref_emergency.getText().toString();
-    
     }
     
     
