@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         /* POINT - : TedPermission */
         TedPermission.with(this).setPermissionListener(mPermissionListener).setDeniedMessage(mResources.getString(R.string.ERROR_PERMISSION_ACCEPT))
-                .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE).check();
+                .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.CALL_PHONE, Manifest.permission.SEND_SMS).check();
 
         /* POINT - : WindowManager */
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);

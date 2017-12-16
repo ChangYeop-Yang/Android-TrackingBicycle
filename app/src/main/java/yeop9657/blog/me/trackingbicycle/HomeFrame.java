@@ -30,7 +30,7 @@ public class HomeFrame extends Fragment implements View.OnClickListener {
         mLocationSystem = new LocationSystem(mView, true);
 
         /* POINT - : Weather Information */
-        new WeatherParsing(mView.getContext(), mView, mLocationSystem.dLatitude, mLocationSystem.dLongitude);
+        new WeatherParsing(mView.getContext(), mView, mLocationSystem.dLatitude, mLocationSystem.dLongitude).execute();
     
         /* accelation Sensor info */
         new Sensor(mView);
