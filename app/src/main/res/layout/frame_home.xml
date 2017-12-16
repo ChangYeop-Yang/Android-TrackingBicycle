@@ -130,7 +130,7 @@
                     android:textStyle="bold"
                     android:textSize="30sp"
                     android:textAlignment="center"
-                    android:format12Hour="a hh:mm:ss "
+                    android:format24Hour="a hh:mm:ss "
                     android:textColor="#4169E1"/>
 
             </android.support.v7.widget.CardView>

@@ -70,22 +70,22 @@ public class Sensor {
 			switch (event.sensor.getType()) {
 				case android.hardware.Sensor.TYPE_ACCELEROMETER:
 					output[0] +=
-							"\n X:" + v[0] +
-									"\n Y:" + v[1] +
-									"\n Z:" + v[2] + "\n";
+							"-X:" + v[0] +
+									"\n -Y:" + v[1] +
+									"\n -Z:" + v[2] + "\n";
 					
 					break;
 				case android.hardware.Sensor.TYPE_GYROSCOPE:
 					output[1] +=
-							"\n X:" + v[0] +
-									"\n Y:" + v[1] +
-									"\n Z:" + v[2] + "\n";
+							"-X:" + v[0] +
+									"\n -Y:" + v[1] +
+									"\n -Z:" + v[2] + "\n";
 					
 					
 					accelation = (float)Math.sqrt(v[0]*v[0]+v[1]*v[1]);
 					accelation = (float)Math.round(accelation*100)/100;
 					
-					totalString.append(" ※ 가속도 : "); totalString.append(accelation);
+					totalString.append("※ Acceleration: "); totalString.append(accelation); totalString.append("\n");
 					totalString.append(output[1]);
 					textview_sensor_info.setText(totalString);
 					textview_sensor_info.invalidate();

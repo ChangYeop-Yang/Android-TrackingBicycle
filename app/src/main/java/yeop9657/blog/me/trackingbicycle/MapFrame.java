@@ -180,6 +180,8 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         googleMap.setOnMyLocationChangeListener(mOnMyLocationChangeListener);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLocationSystem.dLatitude, mLocationSystem.dLongitude), 17));
         googleMap.setOnMarkerClickListener(mOnMarkerClickListener);
+        googleMap.getUiSettings().setMapToolbarEnabled(false);
+        googleMap.getUiSettings().setCompassEnabled(true);
 
         /* POINT - : PolylineOptions */
         mPolylineOptions = new PolylineOptions();
@@ -194,6 +196,9 @@ public class MapFrame extends Fragment implements OnMapReadyCallback{
         public void onMyLocationChange(Location location) {
 
             Log.e(TAG, String.format("%f, %f", location.getLatitude(), location.getLongitude()));
+
+            /* POINT - : Camera Update */
+            mGoogleMap.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude())));
 
             /* POINT - : LocationSystem */
             final PathAdapter mPathAdapter = new PathAdapter();

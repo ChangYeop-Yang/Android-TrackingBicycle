@@ -22,7 +22,7 @@
 			android:maxLines="1"
 			android:selectAllOnFocus="true"
 			android:singleLine="true"
-			android:title="사용자 이름 설정"/>
+			android:title="- 이름 설정"/>
 
 		<EditTextPreference
 			android:id="@+id/prefedit_phone_number"
@@ -33,7 +33,7 @@
 			android:maxLines="1"
 			android:selectAllOnFocus="true"
 			android:singleLine="true"
-			android:title="내 전화번호"/>
+			android:title="- 전화번호 설정"/>
 
 
 		<ListPreference
@@ -44,7 +44,7 @@
 			android:key="key_bloodtype"
 			android:negativeButtonText="@null"
 			android:positiveButtonText="@null"
-			android:title="혈액형"/>
+			android:title="- 혈액형 설정"/>
 
 		<EditTextPreference
 			android:id="@+id/prefedit_emergency_number"
@@ -55,7 +55,7 @@
 			android:maxLines="1"
 			android:selectAllOnFocus="true"
 			android:singleLine="true"
-			android:title="비상연락망"/>
+			android:title="- 비상연락망 설정"/>
 
 	</PreferenceCategory>
 
@@ -79,7 +79,7 @@
 			android:title="@string/Preference_Developer_OpenSource">
 			<intent
 				android:action="android.intent.action.VIEW"
-				android:data="http://yeop9657.blog.me/221099065729"/>
+				android:data="http://yeop9657.blog.me/221162533210"/>
 		</Preference>
 
 		<Preference
