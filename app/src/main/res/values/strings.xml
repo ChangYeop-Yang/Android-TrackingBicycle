@@ -27,4 +27,30 @@
     <string name="Preference_Developer_Email_Text">개발자에게 이메일을 보냅니다.</string>
     <string name="Preference_Developer_OpenSource">- 오픈소스 정보</string>
     <string name="Preference_Developer_OpenSource_Text">오픈소스 정보를 확인합니다.</string>
+
+    <!--BLOOD TYPE-->
+    <string-array name="bloodType">
+        <item>Rh+ A</item>
+        <item>Rh+ B</item>
+        <item>Rh+ O</item>
+        <item>Rh+ AB</item>
+        <item>Rh- A</item>
+        <item>Rh- B</item>
+        <item>Rh- O</item>
+        <item>Rh- AB</item>
+        <item>else</item>
+    </string-array>
+    <!--BLOOD TYPE VALUE-->
+    <string-array name="bloodType_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
 </resources>

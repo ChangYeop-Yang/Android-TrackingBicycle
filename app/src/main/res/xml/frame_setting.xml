@@ -1,44 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Preference User Information Category -->
-    <PreferenceCategory
-        android:title="@string/Preference_USER_Information"
-        android:key="User_Category">
-    </PreferenceCategory>
+	<!-- Preference User Information Category -->
+	<PreferenceCategory
+		android:key="User_Category"
+		android:title="@string/Preference_USER_Information">
 
-    <!-- Developer Category -->
-    <PreferenceCategory
-        android:title="@string/Preference_Developer_Information"
-        android:key="Developer_Information">
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="useUserName"
+			android:summaryOff="사용자의 정보를 사용하지 않습니다"
+			android:summaryOn="사용자의 정보를 사용합니다"
+			android:title="사용자 정보 사용"/>
 
-        <Preference
-            android:title="@string/Preference_Developer_State"
-            android:summary="@string/Preference_Developer_State_Text"
-            android:key="Developer_State">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://yeop9657.blog.me"/>
-        </Preference>
+		<EditTextPreference
+			android:id="@+id/prefedit_name"
+			android:defaultValue="홍길동"
+			android:dependency="useUserName"
+			android:key="key_name"
+			android:maxLines="1"
+			android:selectAllOnFocus="true"
+			android:singleLine="true"
+			android:title="사용자 이름 설정"/>
 
-        <Preference
-            android:title="@string/Preference_Developer_OpenSource"
-            android:summary="@string/Preference_Developer_OpenSource_Text"
-            android:key="Developer_OpenSource">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://yeop9657.blog.me/221099065729"/>
-        </Preference>
+		<EditTextPreference
+			android:id="@+id/prefedit_phone_number"
+			android:defaultValue="010-"
+			android:dependency="useUserName"
+			android:inputType="phone"
+			android:key="key_phone_number"
+			android:maxLines="1"
+			android:selectAllOnFocus="true"
+			android:singleLine="true"
+			android:title="내 전화번호"/>
 
-        <Preference
-            android:title="@string/Preference_Developer_Email"
-            android:summary="@string/Preference_Developer_Email_Text"
-            android:key="Developer_Email">
-            <intent
-                android:action="android.intent.action.SENDTO"
-                android:data="mailto:yeop9657@naver.com"/>
-        </Preference>
 
-    </PreferenceCategory>
+		<ListPreference
+			android:defaultValue="0"
+			android:dependency="useUserName"
+			android:entries="@array/bloodType"
+			android:entryValues="@array/bloodType_values"
+			android:key="key_bloodtype"
+			android:negativeButtonText="@null"
+			android:positiveButtonText="@null"
+			android:title="혈액형"/>
+
+		<EditTextPreference
+			android:id="@+id/prefedit_emergency_number"
+			android:defaultValue="010-"
+			android:dependency="useUserName"
+			android:inputType="phone"
+			android:key="key_emergency_number"
+			android:maxLines="1"
+			android:selectAllOnFocus="true"
+			android:singleLine="true"
+			android:title="비상연락망"/>
+
+	</PreferenceCategory>
+
+	<!-- Developer Category -->
+	<PreferenceCategory
+		android:key="Developer_Information"
+		android:title="@string/Preference_Developer_Information">
+
+		<Preference
+			android:key="Developer_State"
+			android:summary="@string/Preference_Developer_State_Text"
+			android:title="@string/Preference_Developer_State">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="http://yeop9657.blog.me"/>
+		</Preference>
+
+		<Preference
+			android:key="Developer_OpenSource"
+			android:summary="@string/Preference_Developer_OpenSource_Text"
+			android:title="@string/Preference_Developer_OpenSource">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="http://yeop9657.blog.me/221099065729"/>
+		</Preference>
+
+		<Preference
+			android:key="Developer_Email"
+			android:summary="@string/Preference_Developer_Email_Text"
+			android:title="@string/Preference_Developer_Email">
+			<intent
+				android:action="android.intent.action.SENDTO"
+				android:data="mailto:yeop9657@naver.com"/>
+		</Preference>
+
+	</PreferenceCategory>
 
 </PreferenceScreen>

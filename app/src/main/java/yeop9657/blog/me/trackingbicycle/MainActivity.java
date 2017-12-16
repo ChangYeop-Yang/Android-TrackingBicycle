@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 case (FrameData.FRAME_SETTING_NUM) : {
+                    getFragmentManager().popBackStack();
                     getFragmentManager().beginTransaction().replace(R.id.MainFrameLayout, new SettingFrame()).commit();
                     break;
                 }
