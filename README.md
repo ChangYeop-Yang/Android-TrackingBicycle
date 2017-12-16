@@ -56,3 +56,15 @@ Map Detail Structure             |  Path Structure
 ![](http://blogfiles.naver.net/MjAxNzEyMTZfMjMg/MDAxNTEzNDI4NTIxOTc1.vXSTz3PUM4m3vQ89JI9JiowjylhYG9H2yFtIN608x6Qg.wF9lcAdSOVt3p-Fe2LKJRtxB-ExDIqQPgnxvLlO_P-Mg.PNG.yeop9657/%EA%B7%B8%EB%A6%BC4.png)  |  ![](http://blogfiles.naver.net/MjAxNzEyMTZfMTQ2/MDAxNTEzNDI4NTIxOTU4.SWpZvfsbLs1erlEkmEf0EIrBRzpvlfeNFYPQAkRk2ekg.z8x2eq0OKS_6HmJy6oG79EfSaoUElVPkYbS0DDOtnZ0g.PNG.yeop9657/%EA%B7%B8%EB%A6%BC3.png)
 
 * * *
+
+**※ Application Display**
+
+Home Display             |  Map Display
+:-------------------------:|:-------------------------:
+![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display4.jpg)  |  ![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display1.jpg)
+
+Map Detail Display             |  Path Display
+:-------------------------:|:-------------------------:
+![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display5.jpg)  |  ![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display3.jpg)
+
+* * *
