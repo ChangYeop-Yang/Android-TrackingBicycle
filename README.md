@@ -68,3 +68,11 @@ Map Detail Display             |  Path Display
 ![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display5.jpg)  |  ![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display3.jpg)
 
 * * *
+
+**※ Activity Link**
+
+> ⌘ Naver Blog: [Click](http://yeop9657.blog.me/221162533210)
+
+> ⌘ Youtube: [Click](https://www.youtube.com/watch?v=tBYImD_pKN8&index=19&list=PLrf5kzZX3bT8cC5CLyT2HexM5O6hOYWWo)
+
+* * *
