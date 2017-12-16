@@ -44,7 +44,7 @@
                             android:layout_margin="5dp"
                             android:text="@string/Home_Weather_State"
                             android:textStyle="bold"
-                            android:textColor="@android:color/black"
+                            android:textColor="#2263E1"
                             android:textAlignment="center"
                             android:textSize="20sp"/>
 
@@ -54,7 +54,8 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="@string/Home_Weather_Contents"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="#4A9"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -152,7 +153,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="#4A9"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -204,9 +206,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textSize="30sp"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"/>
+                android:format12Hour="a hh:mm:ss "
+                android:textColor="#4169E1"/>
 
         </LinearLayout>
 
