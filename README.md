@@ -1,7 +1,9 @@
 # Android-TrackingBicycle
 [Mobile App Programming 1] Team School Android Project. (Prof. 정기숙)
 
-* * *
+<p align="center">
+  <img src='http://drive.google.com/uc?export=view&id=1hcY9MBRh9ztjtElmJ7WqALTrSt2SXKHV' /><br>
+</p>
 
 **⌘ 강의개요 및 목적**
 
