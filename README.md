@@ -82,3 +82,9 @@ Map Detail Display             |  Path Display
 > ⌘ Youtube: [Click](https://www.youtube.com/watch?v=tBYImD_pKN8&index=19&list=PLrf5kzZX3bT8cC5CLyT2HexM5O6hOYWWo)
 
 * * *
+
+## ★ Developer Information
+
+|:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
+|:---------------------:|:-------------------------:|:----------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50044128-60406880-00c2-11e9-8d57-ea1cb8e6b2a7.jpg)|![](https://user-images.githubusercontent.com/20036523/50044131-60d8ff00-00c2-11e9-818c-cf5ad97dc76e.jpg)|![](https://user-images.githubusercontent.com/20036523/50044130-60d8ff00-00c2-11e9-991a-107bffa2bf57.jpg)|
