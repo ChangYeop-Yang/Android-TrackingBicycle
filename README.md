@@ -1,4 +1,4 @@
-# ■ Android-TrackingBicycle (Final-Term) - [Mobile App Programming 1] Personal School Android Project. (Prof. 정기숙)
+# ■ Android-TrackingBicycle (Final-Term) <kbd>[Kyungpook National University](http://www.knu.ac.kr/wbbs/)</kbd>
 [Mobile App Programming 1] Team School Android Project. (Prof. 정기숙)
 
 ## ★ Course Goals and Objectives
