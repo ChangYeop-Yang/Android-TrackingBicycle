@@ -24,7 +24,7 @@
 ## ★ Application Structure
 
 |:memo: Home Structure|:memo: Map Structure|
-|:-------------------:|:-----------_------:|
+|:-------------------:|:------------------:|
 |![](http://blogfiles.naver.net/MjAxNzEyMTZfMTA1/MDAxNTEzNDI4NTIxOTYy.z-r630KCOwlfPq8osQjBQbtZRZuFZZQjZPnIdolG0c8g.Qm7gZ0V3DVUzcXFxYvS-QBGYBVtjmZMlRZHvyOEWAuAg.PNG.yeop9657/%EA%B7%B8%EB%A6%BC1.png)|![](http://blogfiles.naver.net/MjAxNzEyMTZfMTMw/MDAxNTEzNDI4NTIxOTcy.m_fmZ-HhfnXJNVaTcf1gTIvToxEMBaHJvz1iLd24iQog.ZKNPKjOzPl2mD9zUanUVUFoZvpZdE6j8kC7mmpaFGXkg.PNG.yeop9657/%EA%B7%B8%EB%A6%BC2.png)|
 
 |:memo: Map Detail Structure|:memo: Path Structure|
