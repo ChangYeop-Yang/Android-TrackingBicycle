@@ -13,6 +13,16 @@
 |:---------------------------------------:|:---------------------------------------:|
 |![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/%5BAndroid%5D%20Teaching%20Material/Course%20Info%201.jpg)|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/%5BAndroid%5D%20Teaching%20Material/Course%20Info%202.jpg)|
 
+## ★ Photo for Development Activity
+
+|:running: Photo for Development Activity 001|:running: Photo for Development Activity 002|
+|:------------------------------------------:|:------------------------------------------:|
+|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfMTAg/MDAxNTEzNDM0NTYzMTEz.ulVIC27I0f44n5lKGO2RZZegIfUqQmq0sA8bfcvV2aUg.pTlPf-XpjC3cWXTHH0HmrOHU6ot6XHhH3aeaFDk9f-cg.JPEG.yeop9657/KakaoTalk_20171216_232538249.jpg?type=w773" width="512" />|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfOTcg/MDAxNTEzNDM0NTYzMTEz.9x6FLmvTGhee3L_MbvO5Bq-2cao2K5pttDtv4nw8dsIg.dwS7LsOGyJnmuO6KYichA1QrGwtXhX1ys6_IKHxVXyUg.JPEG.yeop9657/KakaoTalk_20171216_232537900.jpg?type=w773" width="512" />|
+
+|:running: Photo for Development Activity 003|:running: Photo for Development Activity 004|
+|:------------------------------------------:|:------------------------------------------:|
+|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfOTAg/MDAxNTEzNDM0NTYzMTEx.lzjFlAJCiT5ZmnhMqKAbI8C_gm7mamnm0lhD0wz6D4sg.DM49QLjYBI-5SrKLGaOL5RIazx524bENb4LFQ76MCx8g.JPEG.yeop9657/KakaoTalk_20171216_232539446.jpg?type=w773" width="512" />|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfMjE5/MDAxNTEzNDM0NTYzMTQx.9Xu88RUlCky7EfpIXC_ZzZYSrXa_BaATwV9N3RcEjywg.iWunPF5GjEEHFTODowwcNVjJqAviMQUU1Gv_WgoIanEg.JPEG.yeop9657/KakaoTalk_20171216_232538996.jpg?type=w773" width="512" />|
+
 ## ★ Project process schedule
 
 ![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide1.JPG)
@@ -52,16 +62,6 @@
 |:movie_camera: Demo Play for Application|
 |:--------------------------------------:|
 |<div align="center"><a href="https://www.youtube.com/watch?v=tBYImD_pKN8"><img src="https://img.youtube.com/vi/tBYImD_pKN8/0.jpg" width="1024" height="486"></a></div>|
-
-## ★ Photo for Development Activity
-
-|:running: Photo for Development Activity 001|:running: Photo for Development Activity 002|
-|:------------------------------------------:|:------------------------------------------:|
-|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfMTAg/MDAxNTEzNDM0NTYzMTEz.ulVIC27I0f44n5lKGO2RZZegIfUqQmq0sA8bfcvV2aUg.pTlPf-XpjC3cWXTHH0HmrOHU6ot6XHhH3aeaFDk9f-cg.JPEG.yeop9657/KakaoTalk_20171216_232538249.jpg?type=w773" width="512" />|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfOTcg/MDAxNTEzNDM0NTYzMTEz.9x6FLmvTGhee3L_MbvO5Bq-2cao2K5pttDtv4nw8dsIg.dwS7LsOGyJnmuO6KYichA1QrGwtXhX1ys6_IKHxVXyUg.JPEG.yeop9657/KakaoTalk_20171216_232537900.jpg?type=w773" width="512" />|
-
-|:running: Photo for Development Activity 003|:running: Photo for Development Activity 004|
-|:------------------------------------------:|:------------------------------------------:|
-|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfOTAg/MDAxNTEzNDM0NTYzMTEx.lzjFlAJCiT5ZmnhMqKAbI8C_gm7mamnm0lhD0wz6D4sg.DM49QLjYBI-5SrKLGaOL5RIazx524bENb4LFQ76MCx8g.JPEG.yeop9657/KakaoTalk_20171216_232539446.jpg?type=w773" width="512" />|<img src="https://postfiles.pstatic.net/MjAxNzEyMTZfMjE5/MDAxNTEzNDM0NTYzMTQx.9Xu88RUlCky7EfpIXC_ZzZYSrXa_BaATwV9N3RcEjywg.iWunPF5GjEEHFTODowwcNVjJqAviMQUU1Gv_WgoIanEg.JPEG.yeop9657/KakaoTalk_20171216_232538996.jpg?type=w773" width="512" />|
 
 ## ★ REFERENCE
 
