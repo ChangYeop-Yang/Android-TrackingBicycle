@@ -33,7 +33,9 @@
 
 ## ★ Development Environment for Application
 
-![](https://postfiles.pstatic.net/MjAxNzEyMTdfMjEy/MDAxNTEzNDM4MDI1ODE2.QLFzsfken6A7iz7OFqGNJr5hUl2wWx_oSBmbh40Amawg.FEJUdhhLo2IFG1SwLlfqEnbcVZHmov0_NH-hUyEMG5kg.JPEG.yeop9657/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.JPG?type=w773)
+<p align="center">
+  <img src="https://postfiles.pstatic.net/MjAxNzEyMTdfMjEy/MDAxNTEzNDM4MDI1ODE2.QLFzsfken6A7iz7OFqGNJr5hUl2wWx_oSBmbh40Amawg.FEJUdhhLo2IFG1SwLlfqEnbcVZHmov0_NH-hUyEMG5kg.JPEG.yeop9657/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.JPG?type=w773" width="1024" />
+</p>
 
 ## ★ Application Structure
 
