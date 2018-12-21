@@ -51,7 +51,7 @@
 
 |:movie_camera: Demo Play for Application|
 |:--------------------------------------:|
-|<img src='http://drive.google.com/uc?export=view&id=1hcY9MBRh9ztjtElmJ7WqALTrSt2SXKHV' />|
+|<div align="center"><a href="https://www.youtube.com/watch?v=tBYImD_pKN8"><img src="https://img.youtube.com/vi/tBYImD_pKN8/0.jpg" width="1024" height="486"></a></div>|
 
 ## ★ REFERENCE
 
