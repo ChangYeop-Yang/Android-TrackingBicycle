@@ -21,6 +21,20 @@
 
 ![Alt text](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Slide3.JPG)
 
+## ★ Application UI/UX
+
+|:camera: Home Display|:camera: Map Display|
+|:-------------------:|:------------------:|
+|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display4.jpg)|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display1.jpg)|
+
+|:camera: Map Detail Display|:camera: Path Display|
+|:-------------------------:|:------------------:|
+|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display5.jpg)|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display3.jpg)
+
+## ★ Development Environment for Application
+
+![](https://postfiles.pstatic.net/MjAxNzEyMTdfMjEy/MDAxNTEzNDM4MDI1ODE2.QLFzsfken6A7iz7OFqGNJr5hUl2wWx_oSBmbh40Amawg.FEJUdhhLo2IFG1SwLlfqEnbcVZHmov0_NH-hUyEMG5kg.JPEG.yeop9657/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.JPG?type=w773)
+
 ## ★ Application Structure
 
 |:memo: Home Structure|:memo: Map Structure|
@@ -30,16 +44,6 @@
 |:memo: Map Detail Structure|:memo: Path Structure|
 |:-------------------------:|:-------------------:|
 |![](http://blogfiles.naver.net/MjAxNzEyMTZfMjMg/MDAxNTEzNDI4NTIxOTc1.vXSTz3PUM4m3vQ89JI9JiowjylhYG9H2yFtIN608x6Qg.wF9lcAdSOVt3p-Fe2LKJRtxB-ExDIqQPgnxvLlO_P-Mg.PNG.yeop9657/%EA%B7%B8%EB%A6%BC4.png)|![](http://blogfiles.naver.net/MjAxNzEyMTZfMTQ2/MDAxNTEzNDI4NTIxOTU4.SWpZvfsbLs1erlEkmEf0EIrBRzpvlfeNFYPQAkRk2ekg.z8x2eq0OKS_6HmJy6oG79EfSaoUElVPkYbS0DDOtnZ0g.PNG.yeop9657/%EA%B7%B8%EB%A6%BC3.png)|
-
-## ★ Application Display
-
-|:camera: Home Display|:camera: Map Display|
-|:-------------------:|:------------------:|
-|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display4.jpg)|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display1.jpg)|
-
-|:camera: Map Detail Display|:camera: Path Display|
-|:-------------------------:|:------------------:|
-|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display5.jpg)|![](https://github.com/ChangYeop-Yang/Android-TrackingBicycle/blob/master/Project_Info_File/Display3.jpg)
 
 ## ★ Demo Play for Application
 
